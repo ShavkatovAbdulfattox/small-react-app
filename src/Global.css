@@ -1,0 +1,197 @@
+/*  Global css variables */
+
+:root {
+  --blue-light: hsl(180deg, 65%, 52%);
+  --white: hsl(180deg, 0%, 92%);
+  --primary: rgb(16, 80, 255);
+  --danger: hsl(0deg 100% 50%);
+  --success: hsl(120deg 100% 50%);
+  --black: hsl(0deg 0% 0%);
+  --grey: hsl(30deg 0% 50%);
+  --light-white-grey: hsl(30deg 0% 80%);
+  --light-grey: hsl(30deg 0% 50%);
+  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-light: 400;
+  --border-r05: 0.5em;
+  --color-text: hsl(210deg 10% 90% / 1);
+  --color-background: hsl(210deg 15% 6% / 1);
+  --color-blurred-background: hsl(210deg 15% 6% / 0.75);
+  --color-action: hsl(240deg 95% 62% / 1);
+  --color-primary: hsl(225deg 100% 75% / 1);
+  --color-secondary: hsl(333deg 100% 55% / 1);
+  --color-tertiary: hsl(280deg 100% 85% / 1);
+  --color-decorative: hsl(200deg 50% 60% / 1);
+  --color-info: hsl(225deg 100% 80% / 1);
+  --color-info-background: hsl(225deg 100% 80% / 0.1);
+  --color-error: hsl(340deg 95% 60% / 1);
+  --color-error-background: hsl(340deg 95% 43% / 1);
+  --color-success: hsl(160deg 100% 40% / 1);
+  --color-success-background: hsl(160deg 100% 40% / 0.1); 
+  --color-warning: hsl(40deg 100% 50% / 1);
+  --color-warning-background: hsl(40deg 100% 50% / 0.1);
+  --color-gray-50: hsl(210deg 19% 10% / 1);
+  --color-gray-100: hsl(210deg 15% 20% / 1);
+  --color-gray-200: hsl(210deg 15% 25% / 1);
+  --color-gray-300: hsl(210deg 10% 40% / 1);
+  --color-gray-400: hsl(210deg 9% 45% / 1);
+  --color-gray-500: hsl(210deg 8% 50% / 1);
+  --color-gray-600: hsl(210deg 12% 55% / 1);
+  --color-gray-700: hsl(210deg 14% 66% / 1);
+  --color-gray-800: hsl(210deg 20% 77% / 1);
+  --color-gray-900: hsl(210deg 25% 88% / 1);
+  --color-gray-1000: hsl(210deg 25% 96% / 1);
+  --color-syntax-bg: hsl(210deg 15% 6% / 1);
+  --color-syntax-highlight: hsl(210deg 30% 18% / 1);
+  --color-syntax-txt: hsl(0deg 0% 100% / 1);
+  --color-syntax-comment: hsl(200deg 18% 51% / 1);
+  --color-syntax-prop: hsl(326deg 100% 61% / 1);
+  --color-syntax-bool: hsl(50deg 100% 50% / 1);
+  --color-syntax-val: hsl(210deg 12% 65% / 1);
+  --color-syntax-str: hsl(259deg 100% 71% / 1);
+  --color-syntax-name: hsl(280deg 100% 66% / 1);
+  --color-syntax-del: hsl(0deg 100% 67% / 1);
+  --color-syntax-regex: hsl(50deg 100% 50% / 1);
+  --color-syntax-fn: hsl(195deg 100% 50% / 1);
+  --color-code-background-color: hsl(210deg 15% 20% / 1);
+  --color-kbd-background-color: hsl(210deg 15% 20% / 1);
+  --color-kbd-border-color: hsl(210deg 10% 40% / 1);
+  --tooltip-shadow: none;
+  --kbd-background-color: var(--color-gray-300);
+  --kbd-border-color: var(--color-gray-200);
+  --shadow-color: 210deg 15% 6%;
+  --shadow-elevation-low: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06),
+    0px 0.5px 0.7px -0.6px hsl(var(--shadow-color) / 0.11),
+    0px 1.1px 1.4px -1.2px hsl(var(--shadow-color) / 0.15);
+  --shadow-elevation-medium: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.07),
+    0px 1.1px 1.4px -0.4px hsl(var(--shadow-color) / 0.1),
+    0px 2.4px 3.1px -0.8px hsl(var(--shadow-color) / 0.14),
+    0.1px 5.4px 7.1px -1.2px hsl(var(--shadow-color) / 0.17);
+  --shadow-elevation-high: 0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06),
+    0px 2.3px 3px -0.2px hsl(var(--shadow-color) / 0.08),
+    0.1px 4.3px 5.6px -0.4px hsl(var(--shadow-color) / 0.09),
+    0.1px 6.6px 8.7px -0.5px hsl(var(--shadow-color) / 0.11),
+    0.1px 9.8px 12.9px -0.7px hsl(var(--shadow-color) / 0.13),
+    0.2px 14.3px 18.8px -0.9px hsl(var(--shadow-color) / 0.14),
+    0.3px 20.8px 27.3px -1.1px hsl(var(--shadow-color) / 0.16),
+    0.4px 29.6px 38.9px -1.2px hsl(var(--shadow-color) / 0.17);
+  --filter-elevation-low: drop-shadow(
+      0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06)
+    )
+    drop-shadow(0px 0.5px 0.7px hsl(var(--shadow-color) / 0.11))
+    drop-shadow(0px 1.1px 1.4px hsl(var(--shadow-color) / 0.15));
+  --filter-elevation-medium: drop-shadow(
+      0px 0.2px 0.3px hsl(var(--shadow-color) / 0.07)
+    )
+    drop-shadow(0px 1.1px 1.4px hsl(var(--shadow-color) / 0.1))
+    drop-shadow(0px 2.4px 3.1px hsl(var(--shadow-color) / 0.14))
+    drop-shadow(0.1px 5.4px 7.1px hsl(var(--shadow-color) / 0.17));
+  --filter-elevation-high: drop-shadow(
+      0px 0.2px 0.3px hsl(var(--shadow-color) / 0.06)
+    )
+    drop-shadow(0px 2.3px 3px hsl(var(--shadow-color) / 0.08))
+    drop-shadow(0.1px 4.3px 5.6px hsl(var(--shadow-color) / 0.09))
+    drop-shadow(0.1px 6.6px 8.7px hsl(var(--shadow-color) / 0.11))
+    drop-shadow(0.1px 9.8px 12.9px hsl(var(--shadow-color) / 0.13))
+    drop-shadow(0.2px 14.3px 18.8px hsl(var(--shadow-color) / 0.14))
+    drop-shadow(0.3px 20.8px 27.3px hsl(var(--shadow-color) / 0.16))
+    drop-shadow(0.4px 29.6px 38.9px hsl(var(--shadow-color) / 0.17));
+  --gradient-golden: linear-gradient(-230deg, #ffde00, #ff8a00);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color:var(--color-background);
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  /* font-family: "Poppins", sans-serif; */
+  box-sizing: border-box;
+}
+ul > li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*
+    A utility class to totally remove something from the screen,
+    while still keeping it available for screen-readers.
+  */
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.helloJs {
+  color: var(--color-background);
+  display: inline-block;
+  padding: 0.5rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: var(--color-action);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 1rem;
+  font-weight: 800;
+  /* display: inline-block; */
+}
+
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary) !important;
+}
+
+.btn-success {
+  background: var(--success) !important;
+}
+
+.btn-danger {
+  background: var(--danger) !important;
+}
+
+.btn {
+  display: inline;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 5px 11px;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  color: var(--white);
+  outline: var(--white);
+  outline-offset: 5px;
+  border: none;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
