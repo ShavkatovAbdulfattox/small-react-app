@@ -46,13 +46,28 @@ form {
   background: var(--color-gray-100);
   border-radius: var(--border-r05);
   font-size: 1.3rem;
-  padding: 0.3rem 1rem;
+  padding: 0.8rem 1rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   word-break: break-all;
 }
+
+.wrapper-desc {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+.wrapper-desc h3 {
+  margin: 0;
+}
+.wrapper-desc p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgb(182, 245, 34);
+}
+
 .wrapper-button {
   display: flex;
 }
@@ -85,7 +100,7 @@ form {
 
 .center {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 .clear {
   background: var(--danger);
@@ -98,7 +113,23 @@ form {
   padding: 0.5rem 1rem;
   text-align: center;
   transition: 0.3s ease-out;
-}  
+}
 .clear:hover {
   opacity: 0.5;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  background-color: var(--color-error);
+  padding: 0.5rem;
+  border-radius: var(--border-r05);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 50%;
+  margin-bottom: -3rem;
+}
+.message-success {
+  background-color: var(--color-success);
 }
