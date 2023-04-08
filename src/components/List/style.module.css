@@ -133,3 +133,49 @@ form {
 .message-success {
   background-color: var(--color-success);
 }
+
+/* * Media queries * */
+@media only screen and (max-width: 454px) {
+  form {
+    height: 2rem;
+    margin: 3rem 0 1.5rem 0;
+  }
+  .inputLabel {
+    font-size: 1rem;
+  }
+  .submitBtn {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .message {
+    font-size: 1rem;
+    width: 80%;
+    margin-bottom: -1.5rem;
+  }
+  .wrapper-button button {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+  }
+  .wrapper-desc h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .inputCheckbox {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+  .clear {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.9rem;
+  }
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+  .wrapper-button {
+    margin-bottom: 1rem;
+  }
+}
