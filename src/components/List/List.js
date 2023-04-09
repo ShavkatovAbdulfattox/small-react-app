@@ -33,7 +33,8 @@ function List() {
             // CREATING NEW ITEM
             const newItem = {
                 id: new Date().getTime(),
-                item
+                checked: false,
+                item,
             }
             // setting value
             setList([...list, newItem])
@@ -102,6 +103,13 @@ function List() {
             setIsExist(false)
         }, 1500);
     }
+    const checkActive = (id) => {
+        const cloneData = [...list]
+        setList(
+            cloneData.map((item) => item.id === id ? { ...item, checked: !item.checked } : item)
+        )
+    }
+
 
 
     return (
@@ -112,7 +120,7 @@ function List() {
                 <input type="text" name='list' className={style.inputLabel} value={item} onChange={(e) => setItem(e.target.value)} />
                 <button className={style.submitBtn} type='submit' onClick={addToList}>{isEdited ? "Edit" : "Add"}</button>
             </form>
-            <ListItem list={list} removeItem={removeItem} editItem={editItem} />
+            <ListItem list={list} removeItem={removeItem} editItem={editItem} checkActive={checkActive} />
             {list.length > 0 && <div className={style.center}>
                 <button className={style.clear} onClick={() => clearList()}>clear all</button>
             </div>}

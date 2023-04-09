@@ -3,15 +3,16 @@ import style from "./style.module.css"
 
 function ListItem(props) {
 
+
     return (
         <>
             {
-                props.list.map(({ item, id, changed }) => {
-                    return <div className={style.wrapper} key={id}>
+                props.list.map(({ item, id, changed, checked: isChecked }) => {
+                    return <div className={`${style.wrapper} ${isChecked ? style["wrapper-active"] : ""}`} key={id}>
                         <div className={style.text}>
-                            <input type="checkbox" className={style.inputCheckbox} />
+                            <input type="checkbox" className={`${style.inputCheckbox}`} onClick={() => props.checkActive(id)} />
                             <div className={style["wrapper-desc"]}>
-                                <h3>{item}</h3>
+                                <h3 className={isChecked ? style["note-active"] : ""}>{item}</h3>
                                 {changed && <p>Edited</p>}
                             </div>
 

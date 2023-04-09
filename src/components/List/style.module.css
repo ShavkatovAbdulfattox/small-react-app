@@ -49,8 +49,7 @@ form {
   padding: 0.8rem 1rem;
   margin-bottom: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column-reverse;
   word-break: break-all;
 }
 
@@ -70,6 +69,8 @@ form {
 
 .wrapper-button {
   display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
 }
 .wrapper-button button {
   font-size: 1.5rem;
@@ -133,6 +134,17 @@ form {
 .message-success {
   background-color: var(--color-success);
 }
+
+/* TODO: active classes */
+.wrapper-active {
+  opacity: 0.7;
+}
+.note-active {
+  text-decoration: line-through 3px red;
+  font-weight: 200;
+}
+
+/* TODO: active classes */
 
 /* * Media queries * */
 @media only screen and (max-width: 454px) {
