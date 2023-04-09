@@ -147,7 +147,7 @@ form {
 /* TODO: active classes */
 
 /* * Media queries * */
-@media only screen and (max-width: 454px) {
+@media only screen and (max-width: 654px) {
   form {
     height: 2rem;
     margin: 3rem 0 1.5rem 0;
