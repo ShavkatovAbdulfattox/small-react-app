@@ -91,6 +91,7 @@ form {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 .text {
@@ -175,6 +176,7 @@ form {
     font-weight: 500;
   }
   .inputCheckbox {
+    min-width: 1rem;
     width: 1rem;
     height: 1rem;
     margin-right: 0.5rem;
